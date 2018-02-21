@@ -2,5 +2,13 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Images">
     <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\Canada-icon.png" Url="Images/Canada-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\China-icon.png" Url="Images/China-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\Denmark-icon.png" Url="Images/Denmark-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\England-icon.png" Url="Images/England-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\flag_sweden.png" Url="Images/flag_sweden.png" ReplaceContent="TRUE" />
+    <File Path="Images\Norway-icon.png" Url="Images/Norway-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\Pakistan-icon.png" Url="Images/Pakistan-icon.png" ReplaceContent="TRUE" />
+    <File Path="Images\United-States-icon.png" Url="Images/United-States-icon.png" ReplaceContent="TRUE" />
   </Module>
 </Elements>

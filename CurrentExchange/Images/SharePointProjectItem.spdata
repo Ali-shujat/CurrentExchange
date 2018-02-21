@@ -3,5 +3,13 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Canada-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="China-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Denmark-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="England-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="flag_sweden.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Norway-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Pakistan-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="United-States-icon.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

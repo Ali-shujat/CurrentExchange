@@ -1,31 +1,39 @@
-﻿'use strict';
+﻿$(function () {
+    $("button").click(function () {
+        $.ajax({
+            async: true,
+            url: 'https://api.fixer.io/latest ',
+            method: "GET",
+        })
+            .done(successFunction)
+            .fail(failFunction)
 
-ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
+        function successFunction(data) {
 
-function initializePage()
-{
-    var context = SP.ClientContext.get_current();
-    var user = context.get_web().get_currentUser();
+            var sek = data.rates.SEK;
+            var nor = data.rates.NOK;
+            var dkk = data.rates.DKK;
+            var gbp = data.rates.GBP;
+            var usd = data.rates.USD;
+            var cad = data.rates.CAD;
+            var pkr = data.rates.INR;
+            var temp = $('#curr_number').val();
+            console.log(temp);
+            $(".pkrSek").text(((pkr / sek) * temp * 1.7).toFixed(3));
+            $(".canSek").text(((cad / sek) * temp).toFixed(3));
+            $(".usaSek").text(((usd / sek) * temp).toFixed(3));
+            $(".norSek").text(((nor / sek) * temp).toFixed(3));
+            $(".denSek").text(((dkk / sek) * temp).toFixed(3));
+            $(".engSek").text(((gbp / sek) * temp).toFixed(3));
 
-    // This code runs when the DOM is ready and creates a context object which is needed to use the SharePoint object model
-    $(document).ready(function () {
-        getUserName();
+            console.log(nor);
+            console.log(dkk);
+            console.log(gbp);
+            console.log(usd);
+            console.log(cad);
+        }
+        function failFunction(request, textStatus, errorThrown) {
+            console.log('Funkar ej.. ');
+        }
     });
-
-    // This function prepares, loads, and then executes a SharePoint query to get the current users information
-    function getUserName() {
-        context.load(user);
-        context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
-    }
-
-    // This function is executed if the above call is successful
-    // It replaces the contents of the 'message' element with the user name
-    function onGetUserNameSuccess() {
-        $('#message').text('Hello ' + user.get_title());
-    }
-
-    // This function is executed if the above call fails
-    function onGetUserNameFail(sender, args) {
-        alert('Failed to get user name. Error:' + args.get_message());
-    }
-}
+});
